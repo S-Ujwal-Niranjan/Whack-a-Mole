@@ -24,7 +24,7 @@ module slowclk(
     input clk,
     output reg clk_out
     );
-    reg [25:0] counter;
+    reg [18:0] counter;
     always @(posedge clk)
     begin
     counter <= counter + 1;
