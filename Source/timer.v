@@ -27,9 +27,9 @@ module timer(
     );
     always @(clk_o)
     begin
-    count = 111100;
+    count = 6'b111100;
     if(rst == 1)
-        count <= 111100;
+        count <= 6'b111100;
     else
         count <= count + 1;
     end
