@@ -101,9 +101,6 @@ S111100 = 60;
         current_state <= next_state;
     end
     
-    always @(posedge clk)
-    begin
-    end
     
     always @(current_state, sw[15:0])
     begin
@@ -122,7 +119,7 @@ S111100 = 60;
     S000001:
         begin
         score <= 6'b000001;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[12] <= 1;
         if(sw[12])
             next_state <= S000100;
@@ -132,7 +129,7 @@ S111100 = 60;
     S000010:
         begin
         score <= 6'b000010;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[7] <= 1;
         if(sw[7])
             next_state <= S000011;
@@ -142,7 +139,7 @@ S111100 = 60;
     S000011:
         begin
         score <= 6'b000011;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[5] <= 1;
         if(sw[5])
             next_state <= S000100;
@@ -152,7 +149,7 @@ S111100 = 60;
     S000100:
         begin
         score <= 6'b000100;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[1] <= 1;
         if(sw[1])
             next_state <= S000101;
@@ -162,17 +159,17 @@ S111100 = 60;
     S000101:
         begin
         score <= 6'b0000101;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[11] <= 1;
         if(sw[11])
-            next_state <= S000110;
+            next_state = S000110;
         else
             next_state <= S000101;
         end
     S000110:
         begin
         score <= 6'b000110;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[15] <= 1;
         if(sw[15])
             next_state <= S000111;
@@ -182,7 +179,7 @@ S111100 = 60;
     S000111:
         begin
         score <= 6'b000111;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[14] <= 1;
         if(sw[14])
             next_state <= S001000;
@@ -192,7 +189,7 @@ S111100 = 60;
     S001000:
         begin
         score <= 6'b001000;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[6] <= 1;
         if(sw[6])
             next_state <= S001001;
@@ -202,7 +199,7 @@ S111100 = 60;
     S001001:
         begin
         score <= 6'b001001;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[9] <= 1;
         if(sw[9])
             next_state <= S001010;
@@ -212,7 +209,7 @@ S111100 = 60;
     S001010:
         begin
         score <= 6'b001010;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[4] <= 1;
         if(sw[4])
             next_state <= S001011;
@@ -222,7 +219,7 @@ S111100 = 60;
     S001011:
         begin
         score <= 6'b001011;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[8] <= 1;
         if(sw[8])
             next_state <= S001100;
@@ -232,7 +229,7 @@ S111100 = 60;
     S001100:
         begin
         score <= 6'b001100;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[13] <= 1;
         if(sw[13])
             next_state <= S001101;
@@ -242,7 +239,7 @@ S111100 = 60;
     S001101:
         begin
         score <= 6'b001101;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[10] <= 1;
         if(sw[10])
             next_state <= S001110;
@@ -252,7 +249,7 @@ S111100 = 60;
     S001110:
         begin
         score <= 6'b001110;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[2] <= 1;
         if(sw[2])
             next_state <= S001111;
@@ -262,7 +259,7 @@ S111100 = 60;
     S001111:
         begin
         score <= 6'b001111;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[1] <= 1;
         if(sw[1])
             next_state <= S010000;
@@ -272,7 +269,7 @@ S111100 = 60;
     S010000:
         begin
         score <= 6'b010000;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[6] <= 1;
         if(sw[6])
             next_state <= S010001;
@@ -282,7 +279,7 @@ S111100 = 60;
      S010001://this is where you should stare
         begin
         score <= 6'b010001;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[5] <= 1;
         if(sw[5])
             next_state <= S010010;
@@ -292,7 +289,7 @@ S111100 = 60;
      S010010:
         begin
         score <= 6'b010010;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[8] <= 1;
         if(sw[8])
             next_state <= S010011;
@@ -302,7 +299,7 @@ S111100 = 60;
      S010011:
         begin
         score <= 6'b010011;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[9] <= 1;
         if(sw[9])
             next_state <= S010100;
@@ -312,7 +309,7 @@ S111100 = 60;
      S010100:
         begin
         score <= 6'b010100;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[7] <= 1;
         if(sw[7])
             next_state <= S010101;
@@ -322,7 +319,7 @@ S111100 = 60;
     S010101:
         begin
         score <= 6'b010101;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[11] <= 1;
         if(sw[11])
             next_state <= S010110;
@@ -332,7 +329,7 @@ S111100 = 60;
     S010110:
         begin
         score <= 6'b010110;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[3] <= 1;
         if(sw[3])
             next_state <= S010111;
@@ -342,7 +339,7 @@ S111100 = 60;
     S010111:
         begin
         score <= 6'b010111;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[15] <= 1;
         if(sw[15])
             next_state <= S011000;
@@ -352,7 +349,7 @@ S111100 = 60;
     S011000:
         begin
         score <= 6'b011000;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[13] <= 1;
         if(sw[13])
             next_state <= S011001;
@@ -362,7 +359,7 @@ S111100 = 60;
     S011001:
         begin
         score <= 6'b011001;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[4] <= 1;
         if(sw[4])
             next_state <= S011010;
@@ -372,7 +369,7 @@ S111100 = 60;
     S011010:
         begin
         score <= 6'b011010;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[12] <= 1;
         if(sw[12])
             next_state <= S011011;
@@ -382,7 +379,7 @@ S111100 = 60;
     S011011:
         begin
         score <= 6'b011011;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[2] <= 1;
         if(sw[2])
             next_state <= S011100;
@@ -392,7 +389,7 @@ S111100 = 60;
     S011100:
         begin
         score <= 6'b011100;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[10] <= 1;
         if(sw[10])
             next_state <= S011101;
@@ -402,7 +399,7 @@ S111100 = 60;
     S011101:
         begin
         score <= 6'b011101;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[14] <= 1;
         if(sw[14])
             next_state <= S011110;
@@ -412,7 +409,7 @@ S111100 = 60;
     S011110:
         begin
         score <= 6'b011110;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[1] <= 1;
         if(sw[1])
             next_state <= S011111;
@@ -422,7 +419,7 @@ S111100 = 60;
     S011111:
         begin
         score <= 6'b011111;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[5] <= 1;
         if(sw[5])
             next_state <= S100000;
@@ -432,7 +429,7 @@ S111100 = 60;
     S100000:
         begin
         score <= 6'b100000;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[3] <= 1;
         if(sw[3])
             next_state <= S100001;
@@ -442,7 +439,7 @@ S111100 = 60;
     S100001:
         begin
         score <= 6'b100001;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[8] <= 1;
         if(sw[8])
             next_state <= S100010;
@@ -452,7 +449,7 @@ S111100 = 60;
     S100010:
         begin
         score <= 6'b100010;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[6] <= 1;
         if(sw[6])
             next_state <= S100011;
@@ -462,7 +459,7 @@ S111100 = 60;
     S100011:
         begin
         score <= 6'b100011;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[2] <= 1;
         if(sw[2])
             next_state <= S100100;
@@ -472,7 +469,7 @@ S111100 = 60;
     S100100:
         begin
         score <= 6'b100100;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[12] <= 1;
         if(sw[12])
             next_state <= S100101;
@@ -482,7 +479,7 @@ S111100 = 60;
     S100101:
         begin
         score <= 6'b100101;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[15] <= 1;
         if(sw[15])
             next_state <= S100110;
@@ -492,7 +489,7 @@ S111100 = 60;
     S100110:
         begin
         score <= 6'b100110;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[9] <= 1;
         if(sw[9])
             next_state <= S100111;
@@ -502,7 +499,7 @@ S111100 = 60;
     S100111:
         begin
         score <= 6'b010110;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[7] <= 1;
         if(sw[7])
             next_state <= S101000;
@@ -512,7 +509,7 @@ S111100 = 60;
     S101000:
         begin
         score <= 6'b101000;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[4] <= 1;
         if(sw[4])
             next_state <= S101001;
@@ -522,7 +519,7 @@ S111100 = 60;
     S101001:
         begin
         score <= 6'b101001;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[10] <= 1;
         if(sw[10])
             next_state <= S101010;
@@ -532,7 +529,7 @@ S111100 = 60;
     S101010:
         begin
         score <= 6'b101010;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[13] <= 1;
         if(sw[13])
             next_state <= S101011;
@@ -542,7 +539,7 @@ S111100 = 60;
     S101011:
         begin
         score <= 6'b101011;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[11] <= 1;
         if(sw[11])
             next_state <= S101100;
@@ -552,7 +549,7 @@ S111100 = 60;
     S101100:
         begin
         score <= 6'b101100;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[14] <= 1;
         if(sw[14])
             next_state <= S101101;
@@ -562,7 +559,7 @@ S111100 = 60;
     S101101:
         begin
         score <= 6'b101101;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[6] <= 1;
         if(sw[6])
             next_state <= S101110;
@@ -572,7 +569,7 @@ S111100 = 60;
     S101110:
         begin
         score <= 6'b101110;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[9] <= 1;
         if(sw[9])
             next_state <= S101111;
@@ -582,7 +579,7 @@ S111100 = 60;
     S101111:
         begin
         score <= 6'b101111;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[2] <= 1;
         if(sw[2])
             next_state <= S110000;
@@ -592,7 +589,7 @@ S111100 = 60;
     S110000:
         begin
         score <= 6'b110000;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[8] <= 1;
         if(sw[8])
             next_state <= S110001;
@@ -602,7 +599,7 @@ S111100 = 60;
     S110001:
         begin
         score <= 6'b110001;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[13] <= 1;
         if(sw[13])
             next_state <= S110010;
@@ -612,7 +609,7 @@ S111100 = 60;
     S110010:
         begin
         score <= 6'b110010;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[15] <= 1;
         if(sw[15])
             next_state <= S110011;
@@ -622,7 +619,7 @@ S111100 = 60;
     S110011:
         begin
         score <= 6'b110011;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[3] <= 1;
         if(sw[3])
             next_state <= S110100;
@@ -632,7 +629,7 @@ S111100 = 60;
     S110100:
         begin
         score <= 6'b110100;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[12] <= 1;
         if(sw[12])
             next_state <= S110101;
@@ -642,7 +639,7 @@ S111100 = 60;
     S110101:
         begin
         score <= 6'b110101;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[1] <= 1;
         if(sw[1])
             next_state <= S110110;
@@ -652,7 +649,7 @@ S111100 = 60;
     S110110:
         begin
         score <= 6'b110110;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[5] <= 1;
         if(sw[5])
             next_state <= S110111;
@@ -662,7 +659,7 @@ S111100 = 60;
     S110111:
         begin
         score <= 6'b110111;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[7] <= 1;
         if(sw[7])
             next_state <= S111000;
@@ -672,7 +669,7 @@ S111100 = 60;
     S111000:
         begin
         score <= 6'b111000;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[10] <= 1;
         if(sw[10])
             next_state <= S111001;
@@ -682,7 +679,7 @@ S111100 = 60;
     S111001:
         begin
         score <= 6'b111001;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[4] <= 1;
         if(sw[4])
             next_state <= S111010;
@@ -692,7 +689,7 @@ S111100 = 60;
     S111010:
         begin
         score <= 6'b111010;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[14] <= 1;
         if(sw[14])
             next_state <= S111011;
@@ -702,7 +699,7 @@ S111100 = 60;
     S111011:
         begin
         score <= 6'b111011;
-        led[15:0] <= 0;
+        led[15:0] = 0;
         led[11] <= 1;
         if(sw[11])
             next_state <= S111100;

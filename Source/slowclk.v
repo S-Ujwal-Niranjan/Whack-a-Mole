@@ -19,7 +19,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module slowclk(
     input clk,
     output reg clk_out
@@ -35,3 +34,4 @@ module slowclk(
     end      
     end
 endmodule
+

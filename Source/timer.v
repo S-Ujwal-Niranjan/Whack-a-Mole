@@ -31,6 +31,6 @@ module timer(
     if(rst == 1)
         count <= 6'b111100;
     else
-        count <= count + 1;
+        count <= count - 1;
     end
 endmodule
