@@ -26,7 +26,7 @@ module Bin_to_Bcd(
     output [3:0] tens
     );
     wire [3:0] c1,c2,c3,c4,c5,c6,c7;
-    wire [3:4] d1,d2,d3,d4,d5,d6,d7;   
+    wire [3:0] d1,d2,d3,d4,d5,d6,d7;   
     
     assign d1 = {3'b000, inp [5]};
     assign d2 = {c1[2:0], inp[4]};
